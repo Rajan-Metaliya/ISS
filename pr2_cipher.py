@@ -12,5 +12,8 @@ def decrypt(data):
         print(str,k)
 
 if __name__ == '__main__':
-    data = raw_input("Please enter Data: ")
-    decrypt(data)
+    li = ["PmttwEmtkwumBwCDXKM","Qefpfpzxbpbozfmeboxidlofqej","TrvjviTzgyvizjNvrbRcxfizkyd","LbhNerFzneggbNggnpxPnrfrePvcure"]
+    for i in li:
+        print("Decrypting for: "+ i)
+        decrypt(i)
+        print("=="*20)
