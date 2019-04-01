@@ -21,6 +21,6 @@ def affine_encipher(a,b,data):
     return [chr(65+(a*(ord(x)%32-1)+b)%26) for x in data]
 def affine_decipher(a,b,data):
     print gcd(a,26)
-    return [chr(65+((gcd(a,26)*(ord(x)%32-1))-b)%26) for x in data]
+    return [chr(65+(gcd(a,26)*((ord(x)%32-1)-b))%26) for x in data]
 print affine_encipher(5,10,'bbbb')
 print affine_decipher(5,10,affine_encipher(5,10,'bbbb'))
